@@ -4,8 +4,7 @@
 - Empty Project
 
 ## Setup: NASA Project
-- Gradle scripts:
-  - build.gradle file
+- In Gradle scripts > build.gradle file
   - [ ] compileSdk 34
   - [ ] targetSdk 34
   - [ ] implementation 'androidx.compose.material3:material3:1.2.0-alpha05'
