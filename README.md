@@ -1,13 +1,25 @@
 # NASA
 
 ## Getting Started: Empty Project
-- Empty Project
+- Template: Empty Project
+  - SDK API 24: Android 7.0 (Nougat)   
 
 ## Setup: NASA Project
 - In Gradle scripts > build.gradle file
   - [ ] compileSdk 34
   - [ ] targetSdk 34
   - [ ] implementation 'androidx.compose.material3:material3:1.2.0-alpha05'
+ 
+## [Image Composable](https://developer.android.com/jetpack/compose/graphics/images/loading)
+NOTE: Using [Jetpack Compose](https://developer.android.com/jetpack/compose?gclid=Cj0KCQjwuNemBhCBARIsADp74QTy5DaYxDtw1fLXnJ_LBZvGVHZ5me7UEDyMn60p5OLibsR28pnf-LAaAvG2EALw_wcB&gclsrc=aw.ds), a native UI for Android
+- In MainActivity.kt file, created an Image composable
+```
+Image(
+    painter = painterResource(id = R.drawable.NAME_OF_IMAGE),
+    contentDescription = "DESCRIPTION",
+    modifier = Modifer.height(NUMBER.dp)
+)
+```
 
 ## Resources
 - Android Developer Docs
