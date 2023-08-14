@@ -11,7 +11,7 @@
   - [ ] targetSdk 34
   - [ ] implementation 'androidx.compose.material3:material3:1.2.0-alpha05'
  
-## [Image Composable](https://developer.android.com/jetpack/compose/graphics/images/loading)
+### [Image Composable](https://developer.android.com/jetpack/compose/graphics/images/loading)
 NOTE: Using [Jetpack Compose](https://developer.android.com/jetpack/compose?gclid=Cj0KCQjwuNemBhCBARIsADp74QTy5DaYxDtw1fLXnJ_LBZvGVHZ5me7UEDyMn60p5OLibsR28pnf-LAaAvG2EALw_wcB&gclsrc=aw.ds), a native UI for Android
 - In MainActivity.kt file, created an Image composable
 ```
