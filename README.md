@@ -57,9 +57,41 @@ Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
     Text("Selected date timestamp: ${datePickerState.selectedDateMillis ?: "no selection"}")
 }
 ```
-
-## Resources
-- Android Developer Docs
-  - [Compose Material 3](https://developer.android.com/jetpack/androidx/releases/compose-material3)
-- Connect Android Studio to GitHub
-  - [How to upload an android studio project to GitHub](https://www.youtube.com/watch?v=GhfJTOu3_SE)
+## Setting up API
+### Setup: NASA Project - Gradle Dependencies
+- In Gradle scripts > build.gradle file
+  - [ ] [Retrofit](https://square.github.io/retrofit/) to connect to servers
+```implementation('com.squareup.retrofit2:retrofit:2.9.0')```
+  - [ ] [Retrofit with Kotlin Serialization Converter](https://github.com/JakeWharton/retrofit2-kotlinx-serialization-converter)
+```implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:1.0.0")```
+  - [ ] [OkHttp to connect to networks](https://square.github.io/okhttp/)
+```implementation("com.squareup.okhttp3:okhttp:4.10.0")```
+  - [ ] [Retrofit Kotlin Serialization](https://kotlinlang.org/docs/serialization.html#example-json-serialization)
+```implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")```
+  - [ ] [Coil](https://coil-kt.github.io/coil/) is an image loading library for Android
+```implementation("io.coil-kt:coil:2.4.0")```
+  
+### Setup: NASA Project - Image Model
+- In java > siteDirectory (same directory where your ui.theme is located), create new package called model
+- In model directory, create new Kotlin Class for your NASA images
+  - This NASA Images class will need imports and attributes based on the [NASA API](https://api.nasa.gov/):
+  - [ ] Import
+  ```
+  import kotlinx.serialization.SerialName
+  import kotlinx.serialization.Serializable
+  ```
+  - [ ] Attributes based from the [demo](https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY) given
+  ```
+  @Serializable
+  class NasaFotoApi {
+    val copyright: String = "",
+    val date: String,
+    val explanation: String,
+    @SerialName("hdurl"),
+    val imageUrl: String,
+    val media_type: String,
+    @SerialName("service_version")
+    val serviceVersion: String,
+    val url: String,
+  }
+  ```
